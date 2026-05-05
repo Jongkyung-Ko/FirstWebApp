@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이미지 바꾸기</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f1115;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      gap: 20px;
+    }
+    img {
+      width: 320px;
+      max-width: 90vw;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+    }
+    .buttons {
+      display: flex;
+      gap: 12px;
+    }
+    button {
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>이미지 바꾸기</h1>
+
+  <img id="mainImage" src="images/1.jpg" alt="대표 이미지" />
+
+  <div class="buttons">
+    <button onclick="changeImage(1)">1</button>
+    <button onclick="changeImage(2)">2</button>
+    <button onclick="changeImage(3)">3</button>
+  </div>
+
+  <script>
+    function changeImage(num) {
+      document.getElementById("mainImage").src = "images/" + num + ".jpg";
+    }
+  </script>
+</body>
+</html>
